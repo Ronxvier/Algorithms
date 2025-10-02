@@ -34,4 +34,8 @@ public class StackLinked {
             current = current.next;
         }
     }
+
+    public Boolean isEmpty() {
+        return (head == null);
+    }
 }
