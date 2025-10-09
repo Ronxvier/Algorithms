@@ -14,7 +14,7 @@ This algorithm can take in integer expressions containing operators `+`, `-`, `*
 **Output:** 3
 
 ### Methodology
-The algorithm loops through the characters in the expression, skipping over all opening parentheses. It pushes all integers to the `valueStack`  and all operators to the `operatorStack`. Once a closing parenthesis *`)`* is passed in, the algorithm triggers an evaluation of the last two values inserted into the stack, and the last operator inserted.
+The algorithm loops through the characters in the expression, skipping over all opening parentheses. It pushes all integers to the `valueStack`  and all operators to the `operatorStack`. Once a closing parenthesis *`)`* is passed in, the algorithm triggers an evaluation of the last two values inserted into the stack, and the last operator inserted. The resulting integer value is then pushed to the `valueStack`.
 
 ### Constraints
 This implementation currently only processes expressions containing single digit integers, and doesn't multiply integers separated with opening parenthesis *`(`*.
