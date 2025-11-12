@@ -1,26 +1,28 @@
 package StacknQueue;
 
-import java.util.ArrayList;
 public class Stack {
-    private static ArrayList<Integer> myStack = new ArrayList<>();
-
-    public static void push(int input) {
-        myStack.add(input);
+    private String[] q;
+    private int N = 0;
+    public Stack() {
+        q = new String[1];
     }
 
-    public static void list() {
-        for (int element: myStack) {
-            System.out.println(element);
-        }
+    public void push(String s) {
+        if (N == q.length)
+            resize(N*2);
+        q[N++] = s;
     }
 
-    public static int pop() {
-        int removed = myStack.get(myStack.size()-1);
-        myStack.remove(myStack.size() - 1);
-        return removed;
+    public String pop() {
+        if(N== q.length/2)
+            resize(q.length/2);
+        return q[--N]; // REMEMBER: Zero based index. That's why N is decremented before returning the value.
     }
 
-    public static boolean isEmpty() {
-        return myStack.get(0) == null;
+    public void resize(int x) {
+        String[] copy = new String[x];
+        for (int i=0; i < N; i++)
+            copy[i] = q[i];
+        q = copy;
     }
 }

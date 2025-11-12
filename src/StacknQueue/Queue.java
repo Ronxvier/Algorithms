@@ -1,25 +1,29 @@
 package StacknQueue;
 
-import java.util.ArrayList;
-
 public class Queue {
-    private static ArrayList<String> myQueue = new ArrayList<>();
-    public static void enqueue(String input) {
-        myQueue.add(0, input);
+    private String[] q;
+    private int N = 0;
+    private int pos = 0;
+    public Queue() {
+        q = new String[1];
     }
 
-    public static String dequeue() {
-        String returned = myQueue.get(myQueue.size()-1);
-        myQueue.remove(myQueue.size()-1);
-        return returned;
+    public void queue(String s) {
+        if (N == q.length)
+            resize(N*2);
+        q[N++] = s;
     }
 
-    public static boolean isEmpty() {
-        return myQueue.get(0) == null;
+    public String dequeue() {
+        if(N== q.length/2)
+            resize(q.length/2);
+        return q[pos++]; // REMEMBER: Zero based index. That's why N is decremented before returning the value.
+    }
+
+    public void resize(int x) {
+        String[] copy = new String[x];
+        for (int i=0; i < N; i++)
+            copy[i] = q[i];
+        q = copy;
     }
 }
-
-// create empty queue of strings
-// insert a new string onto the queue (enqueue)
-// remove and return least recently added string
-// isEmpty
