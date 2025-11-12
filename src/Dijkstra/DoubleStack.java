@@ -1,7 +1,6 @@
 package Dijkstra;
 
 import java.util.ArrayList;
-
 public class DoubleStack {
     char value;
     ArrayList<Character> operatorStack= new ArrayList<>();
