@@ -1,9 +1,28 @@
 package StacknQueue;
 
-public class Queue {
+import java.util.Iterator;
+
+public class Queue implements Iterable<String>{
     private String[] q;
     private int N = 0;
     private int pos = 0;
+
+    public Iterator<String> iterator() {
+        return new QueueIterator();
+    }
+
+    public class QueueIterator implements Iterator<String>{
+        private int i = N;
+        private int j = 0;
+        public boolean hasNext() {
+            return (j<N); // Remember hasNext() is the Condition that stops the next() method.
+        }
+
+        public String next() {
+            return q[j++];
+        }
+    }
+
     public Queue() {
         q = new String[1];
     }

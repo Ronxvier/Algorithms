@@ -1,8 +1,26 @@
 package StacknQueue;
 
-public class Stack {
+import java.util.Iterator;
+
+public class Stack implements Iterable<String> {
     private String[] q;
     private int N = 0;
+
+    public Iterator iterator() {
+        return new StackIterator();
+    }
+
+    public class StackIterator implements Iterator<String> {
+        private int i = N;
+
+        public boolean hasNext() {
+            return (i>0);
+        }
+
+        public String next() {
+            return q[--i];
+        }
+    }
     public Stack() {
         q = new String[1];
     }
