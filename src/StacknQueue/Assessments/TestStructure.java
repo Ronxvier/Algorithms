@@ -2,6 +2,19 @@ package StacknQueue.Assessments;
 
 public class TestStructure {
     public static void main(String[] args) {
+        // Testing Question 1
+        TwoStackQueue myQueue = new TwoStackQueue();
+        myQueue.enqueue("Schlawg");
+        myQueue.enqueue("Dawg");
+        myQueue.enqueue("Shnawg");
+        System.out.println();
+        System.out.println(myQueue.dequeue());
+        System.out.println(myQueue.dequeue());
+        System.out.println(myQueue.dequeue());
+
+        System.out.println();
+
+        // Testing Question 2
         StackwMax myStack = new StackwMax();
 
         myStack.push(3);
