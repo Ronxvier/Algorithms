@@ -7,7 +7,6 @@ public class TestStructure {
         myQueue.enqueue("Schlawg");
         myQueue.enqueue("Dawg");
         myQueue.enqueue("Shnawg");
-        System.out.println();
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
