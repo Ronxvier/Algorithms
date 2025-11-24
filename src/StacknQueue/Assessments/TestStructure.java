@@ -26,5 +26,20 @@ public class TestStructure {
         System.out.println(myStack.pop());
         System.out.println(myStack.pop());
         System.out.println(myStack.pop());
+
+        // Testing Dequeue
+        Dequeue myDequeue = new Dequeue();
+        myDequeue.addFirst("Entry 1");
+        myDequeue.addFirst("Entry 2");
+        myDequeue.addFirst("Entry 3");
+        myDequeue.addFirst("Entry 4");
+        myDequeue.addLast("Entry 5");
+        System.out.println("Is the list empty? " + myDequeue.isEmpty());
+        System.out.println(myDequeue.removeFirst()); // Entry 4?
+        System.out.println(myDequeue.removeLast()); // Entry 5?
+        System.out.println(myDequeue.removeLast()); // Entry 1?
+        System.out.println(myDequeue.removeFirst()); // Entry 3?
+        System.out.println(myDequeue.removeFirst()); // Entry 2?
+        System.out.println("Is the list empty? " + myDequeue.isEmpty());
     }
 }

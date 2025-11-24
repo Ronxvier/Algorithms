@@ -64,6 +64,20 @@ public class Dequeue<Item> implements Iterable<Item> {
         head.next = currentHead;
     }
 
+    public Item removeFirst(){
+        Node returned = head;
+        head = head.next;
+        return returned.data;
+    }
+    public Item removeLast(){
+        Node current = head;
+        while (current.next.next != null){
+            current = current.next; // stops at second to last node
+        }
+        Node returned = current.next;
+        current.next = null;
+        return returned.data;
+    }
 
     public static void main(String[] args) {
 
