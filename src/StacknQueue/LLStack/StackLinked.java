@@ -1,8 +1,23 @@
 package StacknQueue.LLStack;
 
-public class StackLinked {
+import java.util.Iterator;
+public class StackLinked<Item> implements Iterable<Item> {
     Node head;
-    public void push(int input) {
+    public Iterator<Item> iterator(){return new ListIterator();}
+    public class ListIterator implements Iterator<Item> {
+        private Node<Item> current = head;
+        public boolean hasNext(){
+            return current!=null;
+        }
+        public Item next() {
+            Item item = current.data;
+            current = current.next;
+            return item;
+        }
+    }
+
+
+    public void push(Item input) {
         Node newNode = new Node(input);
         if (head == null) {
             head = newNode;
