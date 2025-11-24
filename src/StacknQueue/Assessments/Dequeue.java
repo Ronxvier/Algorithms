@@ -5,8 +5,20 @@ package StacknQueue.Assessments;
 import java.util.Iterator;
 
 public class Dequeue<Item> implements Iterable<Item> {
-    int N;
     Node head;
+    public Iterator<Item> iterator() {return new ListIterator();}
+    public class ListIterator implements Iterator<Item> {
+        private Node current = head;
+        public boolean hasNext() {
+            return current!= null;
+        }
+        public Item next() {
+            Item item = current.data;
+            current = current.next;
+            return item;
+        }
+    }
+
     private class Node {
         Item data;
         Node next;
@@ -23,11 +35,12 @@ public class Dequeue<Item> implements Iterable<Item> {
     public boolean isEmpty() {
         return head == null;
     }
+
     public int size() {
         int x=0;
         Node current = head;
-        while(current!=null) {
-            x+=1;
+        while(current != null) {
+            x+= 1;
             current = current.next;
         }
         return x;
@@ -38,15 +51,17 @@ public class Dequeue<Item> implements Iterable<Item> {
             head = new Node(item);
         } else {
             Node current = head;
-            while (current.next!=null) {
+            while (current.next != null) {
                 current = current.next;
             }
             current.next = new Node(item);
         }
     }
 
-    public Iterator<Item> iterator(){
-
+    public void addFirst(Item item) {
+        Node currentHead = head;
+        head = new Node(item);
+        head.next = currentHead;
     }
 
 
