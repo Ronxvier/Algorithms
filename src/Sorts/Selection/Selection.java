@@ -12,6 +12,13 @@ public class Selection {
             exch(a, i, min); // remember, i is the first index of the unsorted array each iteration.
         }
     }
+    public static boolean isSorted(Comparable[] a){
+        for (int i=1; i<a.length; i++){
+            if (less(a[i],a[i-1]))
+                return false;
+        }
+        return true;
+    }
 
     private static boolean less(Comparable v, Comparable w){
         return v.compareTo(w) < 0;
