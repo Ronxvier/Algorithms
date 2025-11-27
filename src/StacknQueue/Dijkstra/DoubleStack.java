@@ -1,4 +1,4 @@
-package Dijkstra;
+package StacknQueue.Dijkstra;
 
 import java.util.ArrayList;
 public class DoubleStack {

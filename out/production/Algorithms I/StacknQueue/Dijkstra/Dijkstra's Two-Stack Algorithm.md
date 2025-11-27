@@ -1,6 +1,6 @@
- Dijkstra's two-stack algorithm is a method for evaluating arithmetic expressions written in infix notation. This is a simplified java implementation of Dijkstra's two stack algorithm using an ArrayList.
+ StacknQueue.Dijkstra's two-stack algorithm is a method for evaluating arithmetic expressions written in infix notation. This is a simplified java implementation of StacknQueue.Dijkstra's two stack algorithm using an ArrayList.
 
-ArrayLists have prebuilt *.add()* and **.remove()** functions that can be repurposed into the *.push()* and *.pop()* functions of a Stack. 
+ArrayLists have prebuilt *.add()* and **.remove()** functions that can be repurposed into the *.push()* and *.pop()* functions of a Stack.
 
 This implementation creates a "DoubleStack" class that functions as a data structure containing two stacks: one `valueStack` and one `operatorStack`.
 

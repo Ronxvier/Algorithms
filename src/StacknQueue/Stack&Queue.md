@@ -1,4 +1,4 @@
-Stacks are a data structure that follow the Last in First Out (LIFO) principle. This means that the most recent element added to the stack will be the first to be retrieved from it. 
+Stacks are a data structure that follow the Last in First Out (LIFO) principle. This means that the most recent element added to the stack will be the first to be retrieved from it.
 ## Stack Applications
 * Parsing in a compiler
 * Java virtual machine
@@ -12,4 +12,4 @@ How compilers implement functions:
 * Function call: push local environment and return address.
 * Return: pop return address and local environment
 
-### Dijkstra's two-stack algorithm
+### StacknQueue.Dijkstra's two-stack algorithm
