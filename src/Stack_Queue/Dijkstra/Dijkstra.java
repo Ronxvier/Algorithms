@@ -12,9 +12,9 @@ public class Dijkstra {
             } else if (x == '*' || x=='+' || x=='-' || x=='/') {
                 myList.operatorPush(x);
             } else if (x==')') {
-                int b = myList.valuePop();
-                int a = myList.valuePop();
-                char operator = myList.operatorPop();
+                int b = ((Integer) myList.valuePop());
+                int a = ((Integer) myList.valuePop());
+                char operator = ((Character) myList.operatorPop());
                 switch (operator) {
                     case '+':
                         myList.valuePush(a+b);

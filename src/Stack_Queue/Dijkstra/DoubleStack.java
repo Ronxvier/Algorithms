@@ -1,21 +1,37 @@
 package Stack_Queue.Dijkstra;
 
-import java.util.ArrayList;
 public class DoubleStack {
-    char value;
-    ArrayList<Character> operatorStack= new ArrayList<>();
-    ArrayList<Integer> valueStack = new ArrayList<>();
+    int vN = 1;
+    int oN = 1;
+    Object[] operatorStack = new Object[1];
+    Object[] valueStack = new Object[1];
+
     public void valuePush(Integer input) {
-        valueStack.add(input);
+        if (vN>=valueStack.length)
+            valueStack = resize(2*valueStack.length, valueStack);
+        valueStack[vN++] = input;
     }
-    public Integer valuePop() {
-        return valueStack.remove(valueStack.size()-1);
+
+    public Object valuePop() {
+        return valueStack[--vN];
     }
 
     public void operatorPush(Character input) {
-        operatorStack.add(input);
+        if (oN>=operatorStack.length)
+            operatorStack = resize(2*operatorStack.length, operatorStack);
+        operatorStack[oN++] = input;
     }
-    public Character operatorPop() {
-        return operatorStack.remove(operatorStack.size()-1);
+    public Object operatorPop() {
+        return operatorStack[--oN];
     }
+
+    public Object[] resize(int x, Object[] arr) {
+        Object[] copy = new Object[x];
+        for (int i = 0; i<arr.length; i++) {
+            copy[i] = arr[i];
+        }
+        return copy;
+    }
+
+
 }
