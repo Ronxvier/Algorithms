@@ -20,9 +20,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="36gOK4HhjuW9F7T6UJySePfDPlB" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
@@ -36,6 +36,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GrahamScan.executor": "Run",
+    "Application.Sorts.Assessments.Tests.executor": "Run",
     "Application.Sorts.Shuffling.Shuffle.executor": "Run",
     "Application.Sorts.Shuffling.ShuffleTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -44,10 +46,21 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Sorts.Shuffling.ShuffleTest">
+  <component name="RunManager" selected="Application.Sorts.Assessments.Tests">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="GrahamScan" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="GrahamScan" />
+      <module name="AlgorithmsI" />
+      <option name="PROGRAM_PARAMETERS" value="dog" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Sorts.Assessments.Tests" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Sorts.Assessments.Tests" />
+      <module name="AlgorithmsI" />
+      <method v="2" />
     </configuration>
     <configuration name="Sorts.Shuffling.Shuffle" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sorts.Shuffling.Shuffle" />
