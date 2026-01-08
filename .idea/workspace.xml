@@ -38,6 +38,7 @@
   "keyToString": {
     "Application.GrahamScan.executor": "Run",
     "Application.Sorts.Assessments.Tests.executor": "Run",
+    "Application.Sorts.Merge.mergeTest.executor": "Run",
     "Application.Sorts.Shuffling.Shuffle.executor": "Run",
     "Application.Sorts.Shuffling.ShuffleTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -46,7 +47,7 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.JVM Logging"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Sorts.Assessments.Tests">
+  <component name="RunManager" selected="Application.Sorts.Merge.mergeTest">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -59,6 +60,16 @@
     </configuration>
     <configuration name="Sorts.Assessments.Tests" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sorts.Assessments.Tests" />
+      <module name="AlgorithmsI" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Sorts.Merge.mergeSort" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Sorts.Merge.mergeSort" />
+      <module name="AlgorithmsI" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Sorts.Merge.mergeTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Sorts.Merge.mergeTest" />
       <module name="AlgorithmsI" />
       <method v="2" />
     </configuration>
