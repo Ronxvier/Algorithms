@@ -1,8 +1,10 @@
 package Sorts.Assessments;
 
+import java.util.Arrays;
+
 public class Permutations {
     public static boolean isPermutation(Comparable[] a, Comparable[] b) {
-        return shellSort(a) == shellSort(b);
+        return Arrays.equals(shellSort(a), shellSort(b));
     }
 
     public static Comparable[] shellSort(Comparable[] list) {
